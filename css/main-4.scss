@@ -1,0 +1,151 @@
+$bottomheadlinepading: 20px;
+$accentcolors: rgb(249, 6, 6);
+$textcolor: rgb(0, 0, 0);
+@mixin flexbox {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+.img {
+  width: 100%;
+}
+body {
+  padding:0;
+  margin: 0;
+  font-family: 'Tillana', cursive;
+}
+header {
+  background-color: rgb(180, 178, 175);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav {
+  margin:auto;
+  border-top: 3px solid $accentcolors;
+  width: 920px;
+  height: 50px;
+}
+.col-left {
+  width: 20%;
+  padding-top: 10px;
+  display:block;
+  float: left;
+}
+.col-middle {
+  width: 40%;
+  display:block;
+  float: left;
+}
+.col-right {
+  width: 20%;
+  padding-top: 10px;
+  display:block;
+  float: right;
+}
+li a:hover {
+    color: $accentcolors;
+}
+li a {
+    color: $textcolor;
+    text-decoration: none;
+    margin: 10px;
+    float: left;
+}
+ul {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 8px 0 0 0;
+  }
+  a:visited {
+  color: gray;
+}
+.mainbody {
+  padding-top: 100px;
+  width: 300px;
+  margin: auto;
+}
+  .tdm {
+    text-align: center;
+    font-size: 32px;
+    color: $textcolor;
+  }
+  .info {
+    text-align: center;
+    padding-bottom: 40px;
+    color: $textcolor;
+  }
+.picsection {
+  width: 920px;
+  margin: auto;
+  display: flex;
+}
+.box1 {
+  @include flexbox;
+  flex-wrap: wrap;
+  margin-right: 12px;
+  flex: 2;
+  }
+.onea {
+    flex:2;
+    min-width: 100%;
+  }
+.bottombox {
+  @include flexbox;
+  flex: 3;
+  flex-flow: row;
+  }
+  .oneb {
+    flex:1.2;
+    margin-right: 12px;
+  }
+  .onec {
+    flex:1.8;
+  }
+.box2 {
+  @include flexbox;
+  flex-wrap: wrap;
+  flex-flow: column;
+  flex: 1;
+  }
+  .twoa {
+    flex: 1;
+    min-width: 100%;
+    }
+  .twob {
+    flex: 1;
+    min-width: 100%;
+    }
+.belowpic {
+    width: 920px;
+    height: 300px;
+    margin: auto;
+  }
+.hl1 {
+      padding-top: $bottomheadlinepading;
+      float:left;
+      color: $accentcolors;
+    }
+.hl2 {
+      padding-top: $bottomheadlinepading;
+      float:left;
+      color: $textcolor;
+    }
+.whatsnewinfo {
+      width: 230px;
+      color: $textcolor;
+    }
+.modernlayoutinfo {
+      width: 630px;
+      columns: 3;
+    }
+footer {
+  text-align: center;
+  font-size: 15px;
+  color: $textcolor;
+}
